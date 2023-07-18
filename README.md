@@ -1,3 +1,4 @@
 # Basic_CPU
 
-    SequenceController.sv ===>>> Sequence COntroller to control the CPU process from Inst add -> fetch to Write back 
+    +> SequenceController.sv ===>>> Sequence COntroller to control the CPU process from Instruction_add/fetch to Write_back.
+    +> ALU ====>>> the CPU's execcution unit. 
