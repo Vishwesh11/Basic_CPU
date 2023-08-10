@@ -14,9 +14,6 @@ logic [7:0] alu_out, acc_out, mem_dataOutIR, mem_dataOutALU;
 
 logic [6:0] control_sig;
 
-control_sig = {mem_wr, load_pc, load_ac, inc_pc, halt, load_ir, mem_rd};
-
-
 
 Progam_counter pc  (.clk(clk), .rst(rst), .load_Pc(load_pc), .inc_pc(inc_pc), .pc_addin(ir_addr), .pc_addout(pc_addr));
 Instruction_reg ir (.clk(clk), .rst(rst), .load_ir(load_ir), .mdata_in(mem_dataOutIR), .ir_addr (ir_addr), .op_out  (opcode));
