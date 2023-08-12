@@ -16,9 +16,7 @@ logic [7:0] pc_reg;
 always_ff @(posedge clk or negedge rst) begin 
 
     if(!rst) begin 
-
-        load_pc <= 0; inc_pc <= 0;
-
+            pc_addout <= 5'h0;
     end
 
     else begin 
