@@ -15,7 +15,7 @@ logic [7:0] accum_reg;
 always_ff @(posedge clk or negedge rst) begin 
 
     if(~rst) 
-            load_ac <= 0;
+            accum_reg <= 8'h0;
 
     else begin
         
