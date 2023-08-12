@@ -12,9 +12,9 @@ module Instruction_reg(
 
     always_ff @(posedge clk or negedge rst) begin 
 
-        if(~rst)    
-            load_ir  <= 0;
-        
+        if(~rst) begin 
+                op_out <= 5'b0; ir_addr <= 3'b0;
+        end        
         else begin
             
             if(load_ir) begin 
