@@ -11,4 +11,4 @@
 
     ***====================================================================
     The Elaborated design from Xillinxs Vivado for this CPU :
-![elaborated design](https://github.com/Vishwesh11/Basic_RISC_CPU/assets/54211110/c2c5f775-c47e-4e4e-ae1e-901dec3f8865)
+![image](https://github.com/Vishwesh11/Basic_RISC_CPU/assets/54211110/67688a65-530c-4f17-93ca-d8a87427c672)
