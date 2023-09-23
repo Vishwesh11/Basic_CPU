@@ -8,4 +8,9 @@
     +> Accum  ====>>> Accumulator that holds one of the Value for alu operation 
 
     +> cpu ====>>> CPU is the top module that interconnects all the components and does data and control path functionality of CPU.
-    
+
+    ***====================================================================
+    The Elaborated design from Xillinxs Vivado for this CPU :
+    ![image](https://github.com/Vishwesh11/Basic_RISC_CPU/assets/54211110/b8612431-40ee-4c32-95d2-d052aa93c69c)
+
+
