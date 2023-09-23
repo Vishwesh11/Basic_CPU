@@ -13,7 +13,7 @@ logic [2:0] opcode , curren_state, p_state;
 logic [7:0] alu_out, acc_out, mem_dataOutIR, mem_dataOutALU;
 
 
-Progam_counter pc  (.clk(clk), .rst(rst), .load_Pc(load_pc), .inc_pc(inc_pc), .pc_addin(ir_addr), .pc_addout(pc_addr));
+Progam_counter pc  (.clk(clk), .rst(rst), .load_pc(load_pc), .inc_pc(inc_pc), .pc_addin(ir_addr), .pc_addout(pc_addr));
 Instruction_reg ir (.clk(clk), .rst(rst), .load_ir(load_ir), .mdata_in(mem_dataOutIR), .ir_addr (ir_addr), .op_out  (opcode));
 Memory mem         (.clk(clk), .rst(rst), .mem_rd(mem_rd), .mem_wr(mem_wr), .mem_add(mxMem_addr) .mem_din(alu_out), .mem_dout(mem_dataOut));
 Accum acc          (.clk(clk), .rst(rst), .load_ac(load_ac), .accm_din(alu_out), .accum_dout(acc_out));
@@ -26,7 +26,7 @@ Controller con     (.clk(clk), .rst(rst), .opcode(opcode), .zero(zero), .mem_rd 
 assign fetch = (load_ir) ? 1'b1 : 1'b0 ;
 
 //Mux to provide ether (addr of Instruction) or (addr of data to memory)
-assign mxMem_addr = (fetch) ? pc_addout : ir_addr; 
+assign mxMem_addr = (fetch) ? pc_addr : ir_addr; 
 
 //De-Mux to select either the data coming of memory is Instrction or AluData
  if(load_ir) mem_dataOutIR = mxMem_data ;
